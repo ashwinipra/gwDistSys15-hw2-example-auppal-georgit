@@ -94,7 +94,10 @@ if __name__ == '__main__':
         while not exit_flag:
             conn, addr = s.accept()
             print ('Accepted connection from client', addr)
-            process(conn, force_src_unit, force_dst_unit)
+            try:
+                process(conn, force_src_unit, force_dst_unit)
+            except:
+                print ('Failed to process request from client.')
             conn.close()
     except KeyboardInterrupt:
         exit_flag = True
