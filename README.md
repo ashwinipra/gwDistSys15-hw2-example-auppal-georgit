@@ -7,6 +7,11 @@ then builds an internal graph representation of the conversion server
 network, and processes conversion requests by doing a shortest-path
 traversal through the conversion network.
 
+Because there was such a large number of unidirectional conversion
+servers to launch and manage, we decided to write these ourselves. But
+we can use any internet-connected conversion servers as specified in
+the conversion_servers.txt file that the proxy server reads.
+
 There is a launch.sh script for starting the network of unidirectional
 conversion servers. Some of these servers are in Python and some are
 in Java. The provided launch.sh script starts 18 unidirectional
