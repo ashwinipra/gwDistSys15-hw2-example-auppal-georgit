@@ -1,4 +1,13 @@
 #!/bin/sh
+
+# Ahsen Uppal
+# and
+# Teo Georgiev
+#
+# Launch script for starting a connected network of unidirectional
+# conversion servers. Some are in Python and some are in Java.
+#
+
 python convServer.py 5570 ft m &
 python convServer.py 5571 m ft &
 java ConvServer      5572 ft in 12.0 &
