@@ -46,7 +46,7 @@ true);
             System.out.println("Couldn't convert that - use format \'unit1 unit2 number\'");
         }
 
-        double number = Integer.parseInt(inputs[2]);
+        double number = Float.parseFloat(inputs[2]);
 
         double answer;
         if (inputs[0].equals(unit1) && inputs[1].equals(unit2))
@@ -88,7 +88,7 @@ true);
         }
 
         ServerSocket serverSocket = new ServerSocket(port);
-        System.err.println("Started server on port " + port);
+        System.err.println("Started Java-based " + unit_src + " to " + unit_dst + " conversion server on port " + port);
 
         // wait for connections, and process
         try {

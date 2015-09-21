@@ -86,6 +86,7 @@ if __name__ == '__main__':
     s.listen(5)
     exit_flag = False
     try:
+        print("Started Python-based %s to %s conversion server on port %s" % (force_src_unit, force_dst_unit, portnum))
         while not exit_flag:
             conn, addr = s.accept()
             print ('Accepted connection from client', addr)

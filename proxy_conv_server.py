@@ -104,8 +104,8 @@ def process(conn, next):
     for i in p:
         v = i
         s,d = id_to_unit[u],id_to_unit[v]
-        print ('Query %s %s %s to server.' % (s,d, c))
         host,port = proxy_table[(s,d)]
+        print ('Query %s %s %s to server at %s %s.' % (s,d, c, host, port))
         c = proxy_request(s, d, c, host, port) 
         u = v
 
@@ -121,7 +121,6 @@ if __name__ == '__main__':
     server_port = int(sys.argv[1])
     with open(sys.argv[2]) as f:
         for l in f:
-            print (l)
             try:
                 host,port,input_unit,output_unit = l.split()
                 proxy_table[(input_unit, output_unit)] = (host, port)
@@ -136,6 +135,7 @@ if __name__ == '__main__':
 
     next,dist = compute_distances(edges, n_units)
 
+    print ("Started Python-based proxy conversion server.")
     print('Edges:')
     print(edges)
     print('Next paths:')
@@ -146,7 +146,7 @@ if __name__ == '__main__':
     s.listen(5)
     exit_flag = False
     try:
-        print ("Listening...")
+        print ("Proxy server listening on port %s" % (server_port))
         while not exit_flag:
             conn, addr = s.accept()
             print ('Accepted connection from client %s' % str(addr))
