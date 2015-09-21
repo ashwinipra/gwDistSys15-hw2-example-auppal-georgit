@@ -48,7 +48,7 @@ trace.txt       : Example of a multi-step "cool" conversion showing a
 
 To run all of the software, first build the java server:
 ```
-javac javac ConvServer.java
+javac ConvServer.java
 ```
 
 Then launch all of the conversion servers (mix of Python and Java-based):
