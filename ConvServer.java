@@ -46,6 +46,7 @@ true);
             out.close();
             in.close();
             clientSocket.close();
+            return;
         }
 
         System.out.println("Received message: " + userInput);
@@ -54,6 +55,10 @@ true);
         if (inputs.length != 3)
         {
             System.out.println("Couldn't convert that - use format \'unit1 unit2 number\'");
+            out.close();
+            in.close();
+            clientSocket.close();
+            return;
         }
 
         double number = Float.parseFloat(inputs[2]);
