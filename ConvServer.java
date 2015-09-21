@@ -1,10 +1,21 @@
+/*
+ * Ahsen Uppal
+ * and
+ * Teo Georgiev
+ */
+
 /******************************************************************************
  *
  *  CS 6421 - Simple Conversation
  *  Compilation:  javac ConvServer.java
- *  Execution:    java ConvServer port
+ *  Execution:    java ConvServer port [unit1 unit2 scale]
  *
- *  % java ConvServer portnum
+ *  % java ConvServer portnum [unit1 unit2 scale]
+ *
+ * By default, this program runs a ft to in conversion server, but
+ * with optional command-line arguments, it can run as any conversion
+ * server.
+ *
  ******************************************************************************/
 
 import java.net.Socket;
@@ -38,7 +49,6 @@ true);
         }
 
         System.out.println("Received message: " + userInput);
-        //--TODO: add your converting functions here, msg = func(userInput);
 
         String[] inputs = userInput.split(" ");
         if (inputs.length != 3)
@@ -105,4 +115,3 @@ true);
         System.exit(0);
     }
 }
-
