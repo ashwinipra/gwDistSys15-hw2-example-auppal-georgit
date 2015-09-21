@@ -1,40 +1,3 @@
-# Introduction
-
-This is the HW 2 submission for Ahsen Uppal and Teo Georgiev. This
-shows an example of a Python-based proxy conversion server. This proxy
-server reads a list of conversion server resources from a file. It
-then builds an internal graph representation of the conversion server
-network, and processes conversion requests by doing a shortest-path
-traversal through the conversion network.
-
-There is a launch.sh script for starting the network of unidirectional
-conversion servers. Some of these servers are in Python and some are
-in Java. The provided launch.sh script starts 18 unidirectional
-conversion servers.
-
-
-Build the java server:
-```
-javac javac ConvServer.java
-```
-
-Launch all of the conversion servers (mix of Python and Java-based):
-```
-./launch.sh
-```
-
-# Multi-step Cool Conversions
-
-Because the proxy server performs a full Floyd-Warshall all pairs
-shortest path traversal, it can convert any unit to any other unit if
-provided with a fully-connected network of conversion servers.
-For example, a cm to g conversion goes through 7 hops. The following
-trace shows this conversion while:
-```echo 'cm g 30' | nc localhost 5555``` 
-is executed on a separate command-line.
-
-Output of trace.txt:
-```
 Script started on Sun Sep 20 22:52:35 2015
 >./launch.sh
 Started Python-based ft to m conversion server on port 5570
@@ -119,4 +82,3 @@ Received message:  lbs g 0.46497946186349315
 Proxy request returning 210.91113610798647
 ^CExiting...
 Script done on Sun Sep 20 22:52:50 2015
-```
