@@ -4,7 +4,11 @@
 # Teo Georgiev
 
 #
-#  CS 6421 - Simple Conversation
+#  CS 6421 - Simple Python based conversion server. 
+#  By default, it is an in to cm conversion server, but with optional
+#  command-line arguments, it can run as any type of conversion
+#  server.
+#
 #  Execution:    python convServer.py portnum [unit1 unit2]
 #
 
