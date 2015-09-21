@@ -12,6 +12,9 @@ servers to launch and manage, we decided to write these ourselves. But
 we can use any internet-connected conversion servers as specified in
 the conversion_servers.txt file that the proxy server reads.
 
+Note the proxy server requires Scipy for matrix support.
+On Ubuntu, you can do ```sudo apt-get install scipy```.
+
 There is a launch.sh script for starting the network of unidirectional
 conversion servers. Some of these servers are in Python and some are
 in Java. The provided launch.sh script starts 18 unidirectional
