@@ -17,6 +17,32 @@ conversion servers. Some of these servers are in Python and some are
 in Java. The provided launch.sh script starts 18 unidirectional
 conversion servers.
 
+# Files
+
+We have submitted the following files:
+```
+README.md       : This file
+launch.sh       : Launch script for 18 conversion servers + 1 proxy server.
+ConvServer.java : Java-based conversion server. By default, this
+                  program runs a ft to in conversion server, but
+                  with optional command-line arguments, it can run as
+                  an any unit to any unit conversion server.
+convServer.py   : Python-based conversion server. By default, this
+                  program runs a in to cm conversion server, but
+                  with optional command-line arguments, it can run as
+                  an any unit to any unit conversion server.
+proxy_conv_server.py : Python-based proxy-server. It reads a list of
+                       conversion servers from a file. It then builds
+                       an internal graph representation of the
+                       conversion server network, and processes
+                       conversion requests by doing a shortest-path
+                       traversal through the conversion network.
+trace.txt       : Example of a multi-step "cool" conversion showing a
+                  7-step conversion from cm to g.
+```
+
+# Running
+
 To run all of the software, first build the java server:
 ```
 javac javac ConvServer.java
