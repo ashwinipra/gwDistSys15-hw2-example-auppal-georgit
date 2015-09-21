@@ -12,18 +12,29 @@ conversion servers. Some of these servers are in Python and some are
 in Java. The provided launch.sh script starts 18 unidirectional
 conversion servers.
 
-
-Build the java server:
+To run all of the software, first build the java server:
 ```
 javac javac ConvServer.java
 ```
 
-Launch all of the conversion servers (mix of Python and Java-based):
+Then launch all of the conversion servers (mix of Python and Java-based):
 ```
 ./launch.sh
 ```
 
 # Multi-step Cool Conversions
+
+The launch.sh and conversion_servers.txt specify this conversion
+server network:
+
+```
+                           ,-<-> y <-> $
+                           |
+cm <-> in <-> ft <-> m <-> b <-> kg <-> lbs <-> g
+
+```
+Each bi-directional edge represents two launched conversion server
+instances, one for each direction.
 
 Because the proxy server performs a full Floyd-Warshall all pairs
 shortest path traversal, it can convert any unit to any other unit if
@@ -40,7 +51,7 @@ Welcome, you are connected to a Python-based proxy unit conversion server
 210.91113610798647
 ```
 
-Output of trace.txt:
+Output of launced conversion servers and proxy server:
 ```
 Script started on Sun Sep 20 22:52:35 2015
 >./launch.sh

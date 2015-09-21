@@ -1,3 +1,18 @@
+Because the proxy server performs a full Floyd-Warshall all pairs
+shortest path traversal, it can convert any unit to any other unit if
+provided with a fully-connected network of conversion servers.
+For example, a cm to g conversion goes through 7 hops. The following
+trace shows this conversion while.
+
+Output of netcat client:
+
+>echo 'cm g 30' | nc localhost 5555
+Welcome, you are connected to a Python-based proxy unit conversion server
+210.91113610798647
+
+
+Output of launced conversion servers and proxy server :
+
 Script started on Sun Sep 20 22:52:35 2015
 >./launch.sh
 Started Python-based ft to m conversion server on port 5570
