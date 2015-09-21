@@ -63,6 +63,7 @@ def compute_distances(edges, n_units):
 
     return (next, dist)
 
+# Path reconstruction from next-neighbor matrix.
 def get_path(next, src, dst):
     path = []
     u = unit_to_id[src]
