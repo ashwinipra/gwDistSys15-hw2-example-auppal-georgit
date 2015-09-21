@@ -4,6 +4,17 @@
 # and
 # Teo Georgiev
 
+#
+#  CS 6421 - Python-based proxy conversion server. 
+#  It reads a list of conversion servers from a file. It then builds
+#  an internal graph representation of the conversion server network,
+#  and processes conversion requests by doing a shortest-path
+#  traversal through the conversion network.
+#
+#  Execution:    python convServer.py portnum [unit1 unit2]
+#
+
+
 import sys, socket
 import numpy as np
 
