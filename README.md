@@ -85,7 +85,8 @@ Welcome, you are connected to a Python-based proxy unit conversion server
 210.91113610798647
 ```
 
-Output of launced conversion servers and proxy server:
+Output of launced conversion servers and proxy server (running on port
+5555):
 ```
 Script started on Sun Sep 20 22:52:35 2015
 >./launch.sh
