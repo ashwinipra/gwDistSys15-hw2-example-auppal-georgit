@@ -33,6 +33,13 @@ trace shows this conversion while:
 ```echo 'cm g 30' | nc localhost 5555``` 
 is executed on a separate command-line.
 
+Output of netcat client:
+```
+>echo 'cm g 30' | nc localhost 5555
+Welcome, you are connected to a Python-based proxy unit conversion server
+210.91113610798647
+```
+
 Output of trace.txt:
 ```
 Script started on Sun Sep 20 22:52:35 2015
