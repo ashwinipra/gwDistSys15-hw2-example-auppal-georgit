@@ -11,7 +11,7 @@
 #  and processes conversion requests by doing a shortest-path
 #  traversal through the conversion network.
 #
-#  Execution:    python convServer.py portnum [unit1 unit2]
+#  Execution:    python proxy_conv_server.py portnum [conversion-servers-input-file]
 #
 
 
