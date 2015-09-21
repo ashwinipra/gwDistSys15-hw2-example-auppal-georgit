@@ -28,10 +28,10 @@ The launch.sh and conversion_servers.txt specify this conversion
 server network:
 
 ```
-                           ,-<-> y <-> $
-                           |
 cm <-> in <-> ft <-> m <-> b <-> kg <-> lbs <-> g
-
+                           ^
+                           |
+                           `--> y <-> $
 ```
 Each bi-directional edge represents two launched conversion server
 instances, one for each direction.
